@@ -1,0 +1,356 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+#menu-icon, #close-icon{
+    font-size: 28px;
+    color: black;
+    display: none;
+}
+button{
+    padding: 4px 16px;
+    font-size: 18px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+}
+button:hover{
+    background-color: rgb(134, 227, 255);
+    transition: 0.8s;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    backdrop-filter: blur(10px);
+}
+.logo img{
+    width: 160px;
+    height: 60px;
+    border-radius: 20px;
+}
+
+.navbar ul{
+    display: flex;
+}
+.navbar ul li{
+    list-style-type: none;
+    margin: 0px 10px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 4px 16px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+.navbar ul li a:hover{
+    background-color: rgb(134, 227, 255);
+    transition: 0.8s;
+}
+
+.hero-section{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('./main-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    position: relative;
+}
+.content1{
+    width: 60%;
+    position: absolute;
+    top: 40%;
+    margin: 0px 20%;
+    color: white;
+    text-align: center;
+}
+.content1 h2{
+    font-size: 24px;
+}
+.content1 p{
+    font-size: 20px;
+}
+
+/* ========about-section start ======== */
+
+.about-section{
+    margin: 40px;
+}
+.banner{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media (max-width:830px) {
+    .banner{
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
+/* ========about-section end======== */
+
+/* ========product-section start ======== */
+
+.products{
+    margin: 80px 80px;
+}
+.item i{
+    color: rgb(234, 234, 75);
+}
+.content-s{
+    padding: 10px;
+}
+.items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+.ico{
+    margin: 10px 0px;
+}
+.btn{
+    border: 2px solid rgb(48, 245, 255);
+    padding: 2px 8px;
+    /* background-color: rgb(251, 255, 34); */
+    color: rgb(48, 245, 255);
+    font-size: 18px;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: rgb(48, 245, 255);
+    color: white;
+    transition: 1s;
+}
+.item{
+    margin: 10px 0px;
+    border: 1px solid rgb(204, 204, 204);
+}
+.tag{
+    text-align: center;
+    margin: 20px 0px;
+}
+.tag h1{
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+/* ========product-section end ======== */
+
+/* ========contact-section start ======== */
+
+.contact{
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('./conatct2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+.main{
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.style{
+    margin: 20px 0px;
+}
+.style input{
+    width: 260px;
+    height: 32px;
+    border: none;
+    padding: 4px;
+    background: transparent;
+    color: white;
+    border-bottom: 1px solid white;
+}
+.img2 img{
+    width: 500px;
+    height: 500px;
+}
+.style input:focus{
+    width: 300px;
+    transition: 0.6s;
+    border: 4px solid green;
+}
+.form{
+    border: 1px solid gray;
+    padding: 40px 80px;
+    backdrop-filter: blur(10px);
+}
+.form h2{
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    /* .img2{
+        display: none;
+    } */
+    .main{
+        
+        flex-direction: column;
+        justify-content: center;
+    }
+    .form{
+        margin-top: 40px;
+    }
+    iframe{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (max-width: 450px) {
+    .form{
+        padding: 20px 40px;
+    }
+    .img img{
+        width: 300px;
+        height: 400px;
+    }
+    .img2 img{
+        width: 300px;
+        height: 300px;
+    }
+    .style input{
+        width: 200px;
+    }
+    .main{
+        padding: 20px;
+    }
+    .products{
+        margin: 40px;
+    }
+}
+@media (max-width:1050px) {
+    iframe{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+/* ========contact-section end ======== */
+
+/* ========footer-section end ======== */
+.foot{
+    background: linear-gradient(45deg ,rgb(0, 0, 0), white);
+    padding: 40px;
+}
+.input{
+    text-align: center;
+    margin: 10pxn 0px;
+    position: relative;
+
+}
+.input input{
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+}
+.input i{
+    position: absolute;
+    top: 30%;
+    right: 31%;
+}
+.footing{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.footing ul li{
+    list-style-type: none;
+    margin: 20px 0px;
+}
+.footing ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 4px 16px;
+    background-color: rgb(231, 250, 111);
+    border-radius: 20px;
+}
+.footing ul li a:hover{
+    background-color: rgb(216, 245, 28);
+    transition: 0.6s;
+}
+/* ========footer-section end ======== */
+
+
+@media (max-width:710px) {
+    
+    #menu{
+        position: absolute;
+        top: 86px;
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+        width: 100%;
+        left: 0%;
+        scale: 0;
+        height: 60vh;
+       transition: 0.8s;
+    }
+    button{
+        display: none;
+    }
+    /* .content2{
+        padding: 0px 80px;
+    } */
+    #menu-icon{
+        display: block;
+        color: white;
+        margin: 0px 10px;
+    }
+    #close-icon{
+        display: none;
+        color: white;
+        margin: 0px 10px;
+    }
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .navbar ul li{
+        margin: 16px 0px;
+    }
+    .navbar ul li a{
+        border: 1px solid white;
+    }
+    .content1 h2{
+        font-size: 20px;
+    }
+    .content1 p{
+        font-size: 16px;
+    }
+}
